@@ -12,4 +12,4 @@ greetCallback = function (req, res) {
 
 http.createServer(greetCallback).listen(PORT, HOST);
 
-console.log([HOST, PORT].join(':'));
+console.log('running server -> http://' + [HOST, PORT].join(':'));
