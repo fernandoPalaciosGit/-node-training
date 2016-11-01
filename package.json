@@ -1,0 +1,20 @@
+{
+  "name": "node-training",
+  "version": "1.0.0",
+  "description": "node asessments",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.16.6",
+    "mustache": "^2.2.1",
+    "morgan": "1.7.0"
+  },
+  "scripts": {
+    "chapter1": "node ./http/server-greet",
+    "chapter2": "node ./modules/require-modules"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "fernando palacios landi",
+  "license": "ISC"
+}
