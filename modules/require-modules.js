@@ -1,3 +1,5 @@
+'use strict';
+
 var _ = require('lodash'),
     Mustache = require('mustache'),
     exec = require('child_process').exec,
