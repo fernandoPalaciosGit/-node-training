@@ -11,7 +11,8 @@
   "scripts": {
     "chapter1": "node ./http/server-greet",
     "chapter2": "node ./modules/require-modules",
-    "chapter3": "node ./http/server-web-pages"
+    "chapter3": "node ./http/server-web-pages",
+    "chapter4": "node ./io/callback"
   },
   "keywords": [
     "node"
