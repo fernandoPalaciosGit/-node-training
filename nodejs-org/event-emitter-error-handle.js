@@ -7,8 +7,6 @@ let _ = require('lodash');
 class myEmitter extends EventEmitter {
 }
 
-const emitterError = new myEmitter();
-
 // para evitar que la aplicacion crashee y manejar el evento de error desde donde se publico, se utiliza 'uncaughtExeption'
 let catchEmitter = new myEmitter();
 

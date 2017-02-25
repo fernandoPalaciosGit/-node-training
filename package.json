@@ -15,7 +15,8 @@
     "chapter4": "node ./io/callback",
     "node-org": "node ./nodejs-org/event-emitter-callback",
     "node-org-error": "node ./nodejs-org/event-emitter-error",
-    "node-org-handle-error": "node ./nodejs-org/event-emitter-error-handle"
+    "node-org-handle-error": "node ./nodejs-org/event-emitter-error-handle",
+    "node-org-defaults": "node ./nodejs-org/event-emitter-defaults"
   },
   "keywords": [
     "node"
