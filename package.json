@@ -12,7 +12,8 @@
     "chapter1": "node ./http/server-greet",
     "chapter2": "node ./modules/require-modules",
     "chapter3": "node ./http/server-web-pages",
-    "chapter4": "node ./io/callback"
+    "chapter4": "node ./io/callback",
+    "node-org": "node ./nodejs-org/event-emitter"
   },
   "keywords": [
     "node"
