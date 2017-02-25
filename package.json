@@ -13,10 +13,12 @@
     "chapter2": "node ./modules/require-modules",
     "chapter3": "node ./http/server-web-pages",
     "chapter4": "node ./io/callback",
-    "node-org": "node ./nodejs-org/event-emitter-callback",
+    "node-org-callback": "node ./nodejs-org/event-emitter-callback",
     "node-org-error": "node ./nodejs-org/event-emitter-error",
     "node-org-handle-error": "node ./nodejs-org/event-emitter-error-handle",
-    "node-org-defaults": "node ./nodejs-org/event-emitter-defaults"
+    "node-org-defaults": "node ./nodejs-org/event-emitter-defaults",
+    "node-org-http-request": "node ./nodejs-org/http-request-transaction",
+    "node-org-http-response": "node ./nodejs-org/http-response-transaction"
   },
   "keywords": [
     "node"
