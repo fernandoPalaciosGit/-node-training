@@ -18,7 +18,8 @@
     "node-org-handle-error": "nodemon ./nodejs-org/event-emitter-error-handle",
     "node-org-defaults": "nodemon ./nodejs-org/event-emitter-defaults",
     "node-org-http-request": "nodemon ./nodejs-org/http-request-transaction",
-    "node-org-http-response": "nodemon ./nodejs-org/http-response-transaction"
+    "node-org-http-response": "nodemon ./nodejs-org/http-response-transaction",
+    "node-org-http-server": "nodemon ./nodejs-org/http-server"
   },
   "keywords": [
     "node"
