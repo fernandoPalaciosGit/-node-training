@@ -13,13 +13,13 @@
     "chapter2": "node ./modules/require-modules",
     "chapter3": "node ./http/server-web-pages",
     "chapter4": "node ./io/callback",
-    "node-org-callback": "nodemon ./nodejs-org/event-emitter-callback",
-    "node-org-error": "nodemon ./nodejs-org/event-emitter-error",
-    "node-org-handle-error": "nodemon ./nodejs-org/event-emitter-error-handle",
-    "node-org-defaults": "nodemon ./nodejs-org/event-emitter-defaults",
-    "node-org-http-request": "nodemon ./nodejs-org/http-request-transaction",
-    "node-org-http-response": "nodemon ./nodejs-org/http-response-transaction",
-    "node-org-http-server": "nodemon ./nodejs-org/http-server"
+    "nodeorg-event-callback": "nodemon ./nodejs-org/http/event-emitter-callback",
+    "nodeorg-event-error": "nodemon ./nodejs-org/http/event-emitter-error",
+    "nodeorg-event-handle-error": "nodemon ./nodejs-org/http/event-emitter-error-handle",
+    "nodeorg-event-defaults": "nodemon ./nodejs-org/http/event-emitter-defaults",
+    "nodeorg-http-request": "nodemon ./nodejs-org/http/request-transaction",
+    "nodeorg-http-response": "nodemon ./nodejs-org/http/response-transaction",
+    "nodeorg-http-server": "nodemon ./nodejs-org/http/server"
   },
   "keywords": [
     "node"
