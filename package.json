@@ -20,7 +20,8 @@
     "nodeorg-http-request": "nodemon ./nodejs-org/http/request-transaction",
     "nodeorg-http-response": "nodemon ./nodejs-org/http/response-transaction",
     "nodeorg-http-server": "nodemon ./nodejs-org/http/server",
-    "nodeorg-io": "node ./nodejs-org/blocking-transaction/io"
+    "nodeorg-io": "node ./nodejs-org/blocking-transaction/io",
+    "nodeorg-next-tick": "node ./nodejs-org/blocking-transaction/next-tick"
   },
   "keywords": [
     "node"
