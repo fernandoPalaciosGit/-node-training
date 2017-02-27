@@ -13,7 +13,7 @@
     "chapter2": "node ./modules/require-modules",
     "chapter3": "node ./http/server-web-pages",
     "chapter4": "node ./io/callback",
-    "chapter5-redirection": "nodemon ./http/redirection",
+    "chapter5": "nodemon ./http/modules",
     "nodeorg-event-callback": "node ./nodejs-org/http/event-emitter-callback",
     "nodeorg-event-error": "node ./nodejs-org/http/event-emitter-error",
     "nodeorg-event-handle-error": "node ./nodejs-org/http/event-emitter-error-handle",
