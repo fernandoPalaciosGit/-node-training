@@ -1,15 +1,19 @@
 'use strict';
 
-let HttpClient = require('http');
+let Http = require('http');
 let _ = require('lodash');
-let httpClient = HttpClient.createServer(handlerServer);
 let url = require('url');
 let fs = require('fs');
+const SERVER = {
+    host: '127.0.0.1',
+    port: 3000
+};
 const FILE_PATH = './package.json';
 const ROUTES = {
     json: '/json',
     root: '/',
-    gist: '/gist'
+    gist: '/gist',
+    github: '/github'
 };
 
 // UTILS
@@ -17,7 +21,9 @@ function hasPathName(request, path) {
     return _.includes(path, url.parse(request.url).pathname);
 }
 
-// SERVER
+// HTTP SERVER (engine to serve an application resources)
+let httpServer = Http.createServer(handlerServer);
+
 function handlerServer(request, response) {
     request
         .on('data', _.noop)
@@ -25,13 +31,14 @@ function handlerServer(request, response) {
         .on('end', _.partial(root, request, response))
         .on('end', _.partial(gist, request, response))
         .on('end', _.partial(json, request, response))
+        .on('end', _.partial(github, request, response))
         .on('end', _.partial(unknown, request, response));
     response.on('error', console.error)
 }
 
-httpClient.listen(3000, '127.0.0.1');
+httpServer.listen(SERVER.port, SERVER.host);
 
-// ROUTES
+// HTTP ROUTES (define uri's to locate the resources)
 function json(request, response) {
     if (hasPathName(request, ROUTES.json)) {
         response.writeHead(200, {
@@ -68,6 +75,12 @@ function gist(request, response) {
     }
 }
 
+function github (request, response) {
+    if (hasPathName(request, ROUTES.github)) {
+        getDataFromGithub();
+    }
+}
+
 function unknown(request, response) {
     if (!hasPathName(request, _.values(ROUTES))) {
         response.writeHead(404, {
@@ -75,4 +88,22 @@ function unknown(request, response) {
         });
         response.end('Page not found!');
     }
+}
+
+// HTTP CLIENT (definition of something to request or something to specs a response)
+function getDataFromGithub () {
+    let client = {
+        host: 'github.com',
+        port: '80',
+        path: '/'
+    };
+    Http.get(client, function (response) {
+        if (response.statusCode < 400) {
+            console.log(`GET status ${response.statusCode}: ${JSON.stringify(response.headers)}`);
+
+        } else {
+            throw new Error(`${response.statusCode}: Unable to GET ${client.host}:${client.port}${client.path}`);
+        }
+
+    }).on('error', console.error);
 }
